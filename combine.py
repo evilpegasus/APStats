@@ -17,7 +17,7 @@ print(salary_df)
 #take only the sat and average salary columns
 combined_df = pd.concat([sat_df, salary_df], axis=1, sort=True)[['Total Score Mean', 'Average Salary']]
 #remove rows with empty (NaN) values
-#combined_df = combined_df.dropna(axis = 0) #uncomment to fix pairing issues when district names don't match up
+combined_df = combined_df.dropna(axis = 0) #uncomment to fix pairing issues when district names don't match up
 
 print(combined_df)
 print("Combined dataframe has " + str(combined_df.shape[0]) + " data points")
