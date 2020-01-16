@@ -30,7 +30,6 @@ print("Average of average secondary teacher salary by district is " + str(distri
 #Copy averages to Excel
 #districts.to_excel("average_salary.xlsx")
 
-
-
-
+def get():
+    return districts
 
