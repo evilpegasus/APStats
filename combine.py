@@ -37,8 +37,8 @@ ax = combined_df.plot.scatter(x='Average Salary', y='Total Score Mean')
 ax.set_xlim(xmin = 0)
 ax.set_ylim(bottom = 0)
 plt.title('Mean SAT Scores vs. Mean Salaries')
-plt.xlabel('Mean SAT Score')
-plt.ylabel('Average Secondary Teacher Salary')
+plt.ylabel('Mean SAT Score')
+plt.xlabel('Average Secondary Teacher Salary')
 
 #plot regression line
 plt.plot(X, Y_pred, color='red')
