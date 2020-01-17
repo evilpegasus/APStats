@@ -33,6 +33,7 @@ linear_regressor.fit(X, Y)
 Y_pred = linear_regressor.predict(X)
 
 print("Coefficients: " + str(linear_regressor.coef_))
+print("Y-int: " + str(linear_regressor.intercept_))
 print("R^2: " + str(linear_regressor.score(X, Y)))
 
 #plot data
