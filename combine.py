@@ -23,7 +23,7 @@ print(combined_df)
 print("Combined dataframe has " + str(combined_df.shape[0]) + " data points")
 
 #copy combined dataframe to Excel
-combined_df.to_excel("combined.xlsx")
+#combined_df.to_excel("combined.xlsx")
 
 #linear regression
 X = combined_df['Average Salary'].values.reshape(-1, 1)
@@ -31,6 +31,9 @@ Y = combined_df['Total Score Mean'].values.reshape(-1, 1)
 linear_regressor = LinearRegression()
 linear_regressor.fit(X, Y)
 Y_pred = linear_regressor.predict(X)
+
+print("Coefficients: " + str(linear_regressor.coef_))
+print("R^2: " + str(linear_regressor.score(X, Y)))
 
 #plot data
 ax = combined_df.plot.scatter(x='Average Salary', y='Total Score Mean')
